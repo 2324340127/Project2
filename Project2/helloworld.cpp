@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<ctime>//时间的文件，与time的调用有关
+#include<math.h>
 using namespace std;
 #define Day 7  //全局常量
 int main()
@@ -97,7 +98,7 @@ int main()
 	//cout << "请给电影打分：" << endl;
 	//cin >> score;
 	//cout << "您打的分为：" << score << endl;
-	//switch (score)
+	//switch (score) //依据score 的值进行跳转
 	//{
 	//case 10:
 	//	cout << "您认为是经典电影" << endl; 
@@ -122,30 +123,74 @@ int main()
 	//	cout << num++ << endl;//前置递增，先进行加一在进行表达式运算；后置相反
 	//}
 
-	//案例 猜数字
-	srand((unsigned int)time(NULL));
-	int a = rand() % 100 + 1;
-	int val;
-	cout << "请猜测0到100间的一个数字：" << endl;
-	cin >> val;
-	cout << "您输入的数字为：" << val << endl;
-	while (val != a)
-	{
-		if (val > a)
-		{
-			cout << "您输入的数字过大，请重新输入：" << endl;
-		}
-		else
-		{
-			cout << "您猜测的数字过小，请重新输入：" << endl;
-		}
-	    cin >> val;
-		cout << "您输入的数字为：" << val << endl;
-		//break 可以直接跳出循环；
-	}
-	cout << "您猜中了这个数字，这个数字是:" << val << endl;
+	////案例 猜数字
+	//srand((unsigned int)time(NULL));
+	//int a = rand() % 100 + 1;
+	//int val;
+	//cout << "请猜测0到100间的一个数字：" << endl;
+	//cin >> val;
+	//cout << "您输入的数字为：" << val << endl;
+	//while (val != a)
+	//{
+	//	if (val > a)
+	//	{
+	//		cout << "您输入的数字过大，请重新输入：" << endl;
+	//	}
+	//	else
+	//	{
+	//		cout << "您猜测的数字过小，请重新输入：" << endl;
+	//	}
+	//    cin >> val;
+	//	cout << "您输入的数字为：" << val << endl;
+	//	//break 可以直接跳出循环；
+	//}
+	//cout << "您猜中了这个数字，这个数字是:" << val << endl;
 
+	////do while 循环语句 相比while语句，先进行一段循环在判断
+	//int a = 0;
+	//do
+	//{
+	//	cout << a++ << endl;
+	//} 
+	//while (a < 10);
 
+	////do while 寻找出所有的水仙花数 
+	//int num = 100, num_a, num_b, num_c, sum;
+	//cout << "三位数中的水仙花数有：" << endl;
+	//do
+	//{
+	//	num_a = num / 100; //求百位
+	//	num_b = (num - num_a * 100) / 10; //求十位
+	//	num_c = num % 10; //求个位
+	//	sum = pow(num_a, 3) + pow(num_b, 3) + pow (num_c, 3); //求水仙花数
+	//	if (num == sum)
+	//	{
+	//		cout << sum << endl;
+	//	}
+	//	num++;
+	//} 
+	//while (num < 1000);
+
+	////for循环
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	cout << i << endl;
+	//}
+
+	////敲桌子 
+	//for (int i = 1; i <= 100; i++)
+	//{
+	//	if (i % 10 == 7 || i / 10 == 7 || i % 7 == 0)
+	//	{
+	//		cout << "敲桌子" << endl;
+	//	}
+	//	else
+	//	{
+	//		cout << i << endl;
+	//	}
+	//}
+
+	
 
 
 
