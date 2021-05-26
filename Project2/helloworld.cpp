@@ -63,7 +63,7 @@ int main()
 	//{
 	//	cout << "您不能考上二本" << endl;
 	//}
-    
+
 	//小猪称重
 	//int w_a, w_b, w_c;
 	//cout << "请分别依次输入小猪A, B, C的重量：" << endl;
@@ -190,7 +190,184 @@ int main()
 	//	}
 	//}
 
+	////嵌套循环
+	//for (int i = 1; i <= 10; i++)
+	//{
+	//	for (int j = 1; j <= 10; j++)
+	//	{
+	//		cout << "* " ;
+	//	}
+	//	cout << endl;
+	//}
+
+	////乘法口诀表
+	//for (int i = 1; i <= 9; i++)
+	//{
+	//	for (int j = 1; j <= i; j++)
+	//	{
+	//		cout << j << "x" << i << "=" << i * j << '\t';
+	//	}
+	//	cout << endl;
+	//}
+
+	////break 三种使用时机 跳出最近的一个循环
+	//cout << "请选择副本难度：" << endl;
+	//cout << "1、普通\n2、中等\n3、困难" << endl;
+	//int select = 0;
+	//cin >> select;
+	//switch(select)
+	//{
+	//case 1:
+	//	cout << "您已进入普通难度" << endl;
+	//	break;
+	//case 2:
+	//	cout << "您已进入中等难度" << endl;
+	//	break;
+	//case 3:
+	//	cout << "您已进入困难难度" << endl;
+	//	break;
+	//default:
+	//	break;
+	//}
+
+	//for (int i = 0; i <= 9; i++)
+	//{
+	//	if (i == 5)
+	//	{
+	//		break;
+	//	}
+	//	cout << i << endl;
+	//}
+	//
+
+	//for (int i = 0; i <= 9; i++)
+	//{
+	//	for (int j = 0; j <= 9; j++)
+	//	{
+	//		if (j == 5)
+	//		{
+	//			break;//退出内层循环
+	//		}
+	//		cout << "* ";
+	//	}
+	//	cout << endl;
+	//}
+
+	////continue语句 执行到本行就跳过这一次循环进入下一次循环
+	//for (int i = 0; i <= 100; i++)
+	//{
+	//	if (i % 2 == 0)
+	//	{
+	//		continue;//为偶数时跳过后续语句，即不输出，进入下一次循环；
+	//	}
+	//	cout << i << endl;
+	//}
+
+	////goto 语句能不用就不用
+	//
+	//goto FLAG;
+	//cout << "1、 " << endl;
+	//FLAG://这里是分号
+	//cout << "2、 " << endl;
+
+
+	////数组
+	//int arr[5];
+	//int arr2[5] = { 1,2,3 };//未写的元素用0填充
+	//int arr3[] = { 1,2,5,6,8,9 };//维数由数据的数量决定
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	cin >> arr[i];
+	//}
+	//for (int j = 0; j <= 4; j++)
+	//{
+	//	cout << arr3[j] << endl;
+	//}
+
+	////通过数组名统计整个数组占用的内存大小
+	////通过数组名查看数组的首地址
+	//int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	//cout << "整个数组占用的内存空间为：" << sizeof(arr) << endl;
+	//cout << "每个元素占用的内存空间为：" << sizeof(arr[0]) << endl;
+	//cout << "数组中的元素个数为：" << sizeof(arr) / sizeof(arr[0]) << endl;
+	//cout << "数组的首地址为：" << (int)arr << endl;
+	//cout << "数组的第一个元素地址为：" << (int)&arr[0] << endl;
+	//cout << "数组的第二个元素地址为：" << (int)&arr[1] << endl;
+
+	////五只小猪称体重并依次排序
+	//int arr[5];
+	//int max = 0;
+	//cout << "请输入五只小猪的体重分别为：" << endl;
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	cin >> arr[i];
+	//}
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	for (int j = i; j <= 4; j++)
+	//	{
+	//		if (arr[j] >= max)
+	//		{
+	//			max = arr[j];
+	//			arr[j] = arr[i];
+	//			arr[i] = max;
+	//		}
+	//	}
+	//	max = 0;
+	//}
+	//cout << "体重依次为" << endl;
+	//for (int k = 0; k <= 4; k++)
+	//{
+	//	cout << arr[k] << endl;
+	//}
+
+	////数组元素逆置
+	//int arr[] = {1, 2, 3, 4, 5};
+	//int start = 0;
+	//int end = sizeof(arr) / sizeof(arr[0])-1;
+	//int temp;
+	//while (start <= end)
+	//{
+	//	temp = arr[start];
+	//	arr[start] = arr[end];
+	//	arr[end] = temp;
+	//	start++;
+	//	end--;
+	//}
+	//end = sizeof(arr) / sizeof(arr[0]) - 1;
+	//for (int i = 0; i <= end; i++)
+	//{
+	//	cout << arr[i] << '\t' << endl;
+	//}
 	
+	////冒泡排序
+	//int arr[5];
+	//int max = 0;
+	//int temp;
+	//cout << "请输入五只小猪的体重分别为：" << endl;
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	cin >> arr[i];
+	//}
+
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	for (int j = 0; j < 4 - i; j++)
+	//	{
+	//		if (arr[j] < arr[j + 1])
+	//		{
+	//			temp = arr[j];
+	//			arr[j] = arr[j + 1];
+	//			arr[j + 1] = temp;
+	//		}
+	//	}
+	//}
+	//cout << "小猪的质量依次为：" << endl;
+	//for (int i = 0; i <= 4; i++)
+	//{
+	//	cout << arr[i] << '\t';
+	//}
+
 
 
 
