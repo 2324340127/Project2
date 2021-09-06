@@ -2,22 +2,125 @@
 #include<string>
 #include<ctime>//时间的文件，与time的调用有关
 #include<math.h>
+#include"swap.h"//主函数包含这个自己编写的头文件
 using namespace std;
 #define Day 7  //全局常量
 
 //函数的定义
 //语法
 //返回值类型
+//函数定义的时候， num1 和 num2 并非真实数据，只是形参
+//当调用函数时，实参的值会传递给形参
 
-int add(int num1, int num2)
-{
-	int sum = num1 + num2;
-	return sum;
-}
+//int add(int num1, int num2)
+//{
+//	int sum = num1 + num2;
+//	return sum;
+//}
 
+//定义函数，实现两个数字进行交换
+//void swap(int num1, int num2)
+//{
+//	cout << "交换前：" << endl;
+//	cout << "num1 = " << num1 << endl;
+//	cout << "num2 = " << num2 << endl;//交换前
+//	int temp = num1;
+//	num1 = num2;
+//	num2 = temp;
+//	cout << "交换前：" << endl;
+//	cout << "num1 = " << num1 << endl;
+//	cout << "num2 = " << num2 << endl;//交换后
+//	//不需要return
+//
+//}
+
+
+
+////常见函数样式：
+////1、无参无返
+//void test01()
+//{
+//	cout << "this is test01" << endl;
+//}
+////2、有参无返
+//void test02(int a)
+//{
+//	cout << "this is test02 a = " << a << endl;
+//}
+////3、无参有返
+//int test03()
+//{
+//	cout << "this is test03" << endl;
+//	return 1000;
+//}
+////4、有参有返
+//int test04(int a)
+//{
+//	cout << "this is test04 a = " << a << endl;
+//	return a;
+//}
+
+//函数的声明
+////比较函数，实现两个整型数字进行比较，返回较大的值
+////提前告诉编译器函数的存在，可以利用函数的声明,
+////适用于将函数放在主函数后面的函数
+////且形参不一定要相等
+////声明可以写多次，定义只能写一次；
+//
+//int max(int c, int b);//此时形参是c;后面形参是a;
+
+//函数的分文件编写
+//实现两个数字交换的函数
+
+//函数的声明
+
+//void swap(int a, int b);
+
+//函数的定义
+
+//void swap(int a, int b)
+//{
+//	int temp = a;
+//	a = b;
+//	b = temp;
+//	cout << "a = " << a << endl;
+//	cout << "b = " << b << endl;
+//}
+
+//1、创建.h后缀名的头文件
+//2、创建.cpp后缀名的源文件
+//3、在头文件中写函数的声明
+//4、在源文件中写函数的定义
 
 int main()
 {
+	//int a = 10;
+	//int b = 20;
+	//swap(a, b);
+	////当我们做值得传递时候，函数的形参发生改变，并不会影响实参
+	////函数外的参数并不会发生变化，也就是a和b不会变
+	//cout << a << "\n" << b << endl;
+	//cout << add(1, 2) << endl;
+
+	////无参无返调用
+	//test01();
+	////有参无返调用
+	//test02(1);
+	////无参有返调用
+	//int a = test03();
+	//cout << "num1 = " << a << endl;
+	////有参有返调用
+	//int b = test04(5);
+	//cout << "num2 =" << b << endl;
+
+	//int a = 10;
+	//int b = 20;
+	//cout << max(a, b) << endl;
+
+	//int a = 10;
+	//int b = 20;
+	//swap(a, b);
+
 	//int a = 10;
 	//a = 100;
 	//a += 10;
@@ -183,7 +286,7 @@ int main()
 	//} 
 	//while (num < 1000);
 
-	////for循环
+	///for循环
 	//for (int i = 0; i < 10; i++)
 	//{
 	//	cout << i << endl;
@@ -442,3 +545,9 @@ int main()
 	system("pause");
 	return 0;
 }
+
+
+//int max(int a, int b)
+//{
+//	return a > b ? a : b;
+//}
