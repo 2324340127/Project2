@@ -4,6 +4,18 @@
 #include<math.h>
 using namespace std;
 #define Day 7  //全局常量
+
+//函数的定义
+//语法
+//返回值类型
+
+int add(int num1, int num2)
+{
+	int sum = num1 + num2;
+	return sum;
+}
+
+
 int main()
 {
 	//int a = 10;
@@ -367,7 +379,63 @@ int main()
 	//{
 	//	cout << arr[i] << '\t';
 	//}
+	
+	//二维数组的定义方式
+	//int arr[2][3];
+	//arr[0][0] = 10;
+	//arr[0][1] = 10;
+	//arr[0][2] = 20;
+	//arr[1][0] = 50;
+	//arr[1][1] = 40;
+	//arr[1][2] = 60;
 
+	//二维数组名称用途
+	//查看内存空间和元素地址
+	//int arr[2][3] =
+	//{
+	//	{1, 2, 3},
+	//	{4, 5, 6}
+	//};
+	//cout << "二维数组占用空间为：" << sizeof(arr) << endl;
+	//cout << "二维数组第一行占用空间为：" << sizeof(arr[0]) << endl;
+	//cout << "二维数组第一个元素占用空间为：" << sizeof(arr[0][2]) << endl;
+	//cout << "二维数组行数为：" << sizeof(arr) / sizeof(arr[0]) << endl;
+	//cout << "二维数组列数为：" << sizeof(arr[0]) / sizeof(arr[0][0]) << endl;
+	//cout << "二维数组首地址为：" << (int)arr << endl;
+	//cout << "二维数组第一行首地址为：" << (int) arr[0] << endl;
+	//cout << "二维数组第二行首地址为：" << (int) arr[1] << endl;
+	//cout << "二维元素第一个元素地址为：" << (int)&arr[0][0] << endl;
+
+	//统计成绩
+	//int arr[3][3] =
+	//{
+	//	{100, 100, 100},
+	//	{90, 50, 100},
+	//	{60, 70, 80}
+	//};
+	// total[3] = {};
+	//for (int i = 0; i <= 2; i++)
+	//{
+	//	for (int j = 0; j <= 2; j++)
+	//	{
+	//		total[i] = arr[i][j]+ total[i];
+	//	}
+	//}
+	//cout << "张三李四王五的总成绩分别为" <<endl;
+	//for (int h = 0; h <= 2; h++)
+	//{
+	//	cout << total[h] << endl;
+	//}
+	//string names[3] = { "张三","李四","王五" };
+	//for (int i = 0; i <= 2; i++)
+	//{
+	//	int sum = 0;
+	//	for (int j = 0; j <= 2; j++)
+	//	{
+	//		sum += arr[i][j];
+	//	}
+	//	cout << names[i] << "的总成绩为：" << sum << endl;
+	//}
 
 
 
