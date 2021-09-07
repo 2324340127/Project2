@@ -92,6 +92,41 @@ using namespace std;
 //3、在头文件中写函数的声明
 //4、在源文件中写函数的定义
 
+	//结构体用于用户自定义的数据类型
+	//1、创建一个学生数据类型：学生包括（姓名，年龄，分数）
+
+
+	//结构体嵌套结构体
+
+struct Student
+{
+	//成员列表
+
+	//姓名
+	string name;
+
+	//年龄
+	int age;
+
+	//分数
+	int score;
+
+}s3;//在结构体后加上创建变量
+
+struct teacher
+{
+	int id;
+	string name;
+	int age;
+	Student stu;
+};
+
+
+
+//2、通过学生类型创建具体学生
+
+
+
 int main()
 {
 	//int a = 10;
@@ -120,6 +155,52 @@ int main()
 	//int a = 10;
 	//int b = 20;
 	//swap(a, b);
+
+	//struct Student s1;//结构体应用时结构体struct可以省略，声明时不能省略
+	//s1.name = "张三";
+	//s1.age = 18;
+	//s1.score = 100;
+	//cout << "姓名：" << s1.name <<"\n"<< "年龄：" << s1.age <<"\n"<< "成绩：" << s1.score << endl;
+	//struct Student s2 = { "李四",19,90 };
+	//cout << "姓名：" << s2.name << "\n" << "年龄：" << s2.age << "\n" << "成绩：" << s2.score << endl;
+
+	//创建结构体数组
+	//Student arr[3] = {
+	//	{"张三",18,100},
+	//	{"李四",16,80},
+	//	{"王五",17,98}
+	//};
+	//for(int i = 0; i < 3; i++)
+	//{
+	//	cout << arr[i].name << "的年龄为：" << arr[i].age << "\t" << "成绩为：" << arr[i].score << endl;
+	//}
+
+	////1、创建学生结构体变量
+	//Student s = { "张三",18,100 };
+
+	////2、通过指针指向结构体指针
+	//Student* p = &s;
+
+	////3、通过指针访问结构体变量中的数据
+
+	//cout << "姓名：" << p->name << "年龄为：" << p->age << "分数为：" << (*p).score << endl;
+
+	//创建老师；
+
+	teacher t;
+	t.id = 100;
+	t.name = "老王";
+	t.age = 56;
+	t.stu.name = "小王";
+	t.stu.age = 18;
+	t.stu.score = 100;
+
+	cout << "老师姓名为：" << t.name << "老师编号为：" << t.id << "老师年龄为：" << t.age
+		<< "老师辅导的学生为：" << t.stu.name << "学生成绩为："
+		<< t.stu.age << "学生年龄为：" << t.stu.age << endl;
+
+
+
 
 	//int a = 10;
 	//a = 100;
@@ -643,14 +724,12 @@ int main()
 	//swap02(&a, &b);
 	//cout << "a = " << a << endl;
 	//cout << "b = " << b << endl;
-
 	
-
-
-
-
-
-
+	//1、先创建数组
+	//int arr[10] = { 4,3,6,9,1,2,10,8,7,5 };
+	//int len = sizeof(arr) / sizeof(arr[0]);
+	//bubblesort(&arr[0], len);
+	//printfarray(arr, len);
 
 
 
