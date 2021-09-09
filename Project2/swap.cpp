@@ -43,3 +43,23 @@ void printfarray(int* arr, int len)
 		cout << "第" << i + 1 << "个元素为：" << arr[i] << endl;
 	}
 }
+
+//struct Student
+//{
+//	//成员列表
+//
+//	//姓名
+//	string name;
+//
+//	//年龄
+//	int age;
+//
+//	//分数
+//	int score;
+//
+//}s3;//在结构体后加上创建变量
+//
+//void printfStudent(struct Student s)
+//{
+//	cout << "子函数中 姓名：" << s.name << "年龄：" << s.age << "成绩：" << s.score << endl;
+//}

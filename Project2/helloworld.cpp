@@ -97,35 +97,140 @@ using namespace std;
 
 
 	//结构体嵌套结构体
+//
+//struct Student
+//{
+//	//成员列表
+//
+//	//姓名
+//	string name;
+//
+//	//年龄
+//	int age;
+//
+//	//分数
+//	int score;
+//
+//}s3;//在结构体后加上创建变量
+//
+//struct teacher
+//{
+//	int id;
+//	string name;
+//	int age;
+//	Student stu;
+//};
+//
+//
+//
+//
+////值传递
+//void printfStudent(Student s)
+//{
+//	cout << "子函数中 姓名：" << s.name << "年龄：" << s.age << "成绩：" << s.score << endl;
+//}
+//
+////地址传递
+////将函数中的形参改为指针，可以减少内存空间，而且不会复制新的副本出来
+////加入const 之后 一旦有修改会报误操作
+//
+//
+//void printfStudent2(const struct Student* p)
+//{
+//	cout << "子函数2中 姓名：" << p->name << "年龄：" << p->age << "成绩：" << p->score << endl;
+//}
+//
+////const 的使用场景
 
-struct Student
-{
-	//成员列表
-
-	//姓名
-	string name;
-
-	//年龄
-	int age;
-
-	//分数
-	int score;
-
-}s3;//在结构体后加上创建变量
-
-struct teacher
-{
-	int id;
-	string name;
-	int age;
-	Student stu;
-};
 
 
+//结构体案例1
+//学校正在做毕业设计，每个老师带领五个学生，总共有3名老师，需求如下
+//设计学生和老师的结构体，其中在老师的结构体中，有老师姓名和一个存放5个学生的数组作为成员
+//学生的成员有姓名、考试分数，创建数组存放3名老师，通过函数给每个老师及所需的学生赋值
+//最终打印出老师数据和老师所需的学生数据
 
-//2、通过学生类型创建具体学生
+////学生结构体
+//struct student
+//{
+//	string name;
+//	int age;
+//};
+//
+////老师结构体
+//struct teacher
+//{
+//	string name;
+//	student s[5];
+//};
+//
+//void t_inf(struct teacher *t)
+//{
+//	cout << "输入老师姓名" << endl;
+//	cin >> (*t).name;
+//	for (int i = 0; i < 5; i++)
+//	{
+//		cout << "请输入第" << i + 1 << "个学生姓名和成绩" << endl;
+//		cin >> (*t).s[i].name;
+//		cin >> (*t).s[i].age;
+//	}
+//}
+//void print_inf(struct teacher* t)
+//{
+//	cout << "老师姓名为：" << (*t).name << endl;
+//	for (int i = 0; i < 5; i++)
+//	{
+//		cout << "第" << i + 1 << "个学生姓名和成绩依次为：" << endl;
+//		cout << (*t).s[i].name << "\t" << (*t).s[i].age << endl;
+//	}
+//}
 
+////结构体案例2
+////设计一个英雄的结构体，包括成员姓名，年龄，性别
+////创建结构体数组，数组中存放5名英雄
+////通过冒泡排序的算法，将数组中的英雄按年龄进行升序排序
+////最终打印排序后的结果
+//
+//struct hero
+//{
+//	string name;
+//	int age;
+//	string sex;
+//};
+//
+//void bubblesort_hero(struct hero* p, int len)
+//{
+//	for (int i = 0; i < len - 1; i++)
+//	{
+//		for (int j = 0; j < len - i - 1; j++)
+//		{
+//			if (p[j].age > p[j + 1].age)
+//			{
+//				struct hero temp = p[j];
+//				p[j] = p[j + 1];
+//				p[j + 1] = temp;
+//			}
+//		}
+//	}
+//}
+//
+//void printf_hero_info(struct hero* p, int len)
+//{
+//	for (int i = 0; i < len; i++)
+//	{
+//		cout << p[i].name << "\t" << p[i].age << "\t" << p[i].sex << endl;
+//	}
+//}
 
+//通讯录管理系统
+//添加联系人：向通讯录中添加新人，信息包括（姓名、性别、年龄、联系电话、家庭住址）
+//最多记录1000人；
+//显示联系人：显示通讯录中所有联系人信息
+//删除联系人：按照姓名删除指定联系人
+//查找联系人：按照姓名查看指定联系人信息
+//修改联系人：按照姓名重新修改指定联系人信息
+//清空联系人：清空通讯录中所有信息
+//退出通讯录：退出当前通讯录
 
 int main()
 {
@@ -187,17 +292,67 @@ int main()
 
 	//创建老师；
 
-	teacher t;
-	t.id = 100;
-	t.name = "老王";
-	t.age = 56;
-	t.stu.name = "小王";
-	t.stu.age = 18;
-	t.stu.score = 100;
+	//teacher t;
+	//t.id = 100;
+	//t.name = "老王";
+	//t.age = 56;
+	//t.stu.name = "小王";
+	//t.stu.age = 18;
+	//t.stu.score = 100;
 
-	cout << "老师姓名为：" << t.name << "老师编号为：" << t.id << "老师年龄为：" << t.age
-		<< "老师辅导的学生为：" << t.stu.name << "学生成绩为："
-		<< t.stu.age << "学生年龄为：" << t.stu.age << endl;
+	//cout << "老师姓名为：" << t.name << "老师编号为：" << t.id << "老师年龄为：" << t.age
+	//	<< "老师辅导的学生为：" << t.stu.name << "学生成绩为："
+	//	<< t.stu.age << "学生年龄为：" << t.stu.age << endl;
+
+
+	//将结构体作为函数参数
+	//将学生传入到一个参数中，打印学生身上的所有信息
+
+
+	//创建结构体变量
+
+	//struct Student s;
+	//s.name = "张三";
+	//s.age = 20;
+	//s.score = 85;
+	////cout << "main函数中打印 姓名;" << s.name << "年龄：" << s.age << "分数：" << s.score << endl;
+	//printfStudent(s);
+	//printfStudent2(&s);
+
+	////创建结构体变量
+	//Student s = { "张三",15, 70 };
+
+	////通过函数打印结构体变量
+
+	//printfStudent(s);
+
+	//创建老师信息
+	//teacher t[3];
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	t_inf(&t[i]);
+	//}
+	//for (int i = 0; i < 3; i++)
+	//{
+	//	print_inf(&t[i]);
+
+	//}
+
+
+	////创建英雄信息
+	//struct hero h[5] =
+	//{
+	//	{"刘备",23,"男"},
+	//	{"张飞",22,"男"},
+	//	{"关羽",20,"男"},
+	//	{"赵云",21,"男"},
+	//	{"貂蝉",19,"女"}
+	//};
+	//int len = sizeof(h) / sizeof(h[0]);
+	//bubblesort_hero(h,len);
+	//printf_hero_info(h,len);
+
+
 
 
 
